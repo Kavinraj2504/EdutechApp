@@ -169,7 +169,7 @@ res.status(200).send({"message":"Enrolled successfully"})
 //to get leaderboard
 router.get('/leaderboard',authUser,async(req,res)=>{
     try {
-        let users = userModel.aggregate([
+        let users =await userModel.aggregate([
             {
                 $sort: {
                     totalPoints: 1
