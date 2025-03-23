@@ -175,7 +175,7 @@ router.get('/leaderboard',authUser,async(req,res)=>{
                     totalPoints: 1
                 }
             }, {
-                limit: 10
+                $limit: 10
             }
         ])
         res.send(users)
