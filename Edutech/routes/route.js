@@ -172,7 +172,7 @@ router.get('/leaderboard',authUser,async(req,res)=>{
         let users =await userModel.aggregate([
             {
                 $sort: {
-                    totalPoints: 1
+                    totalPoints: -1
                 }
             }, {
                 $limit: 10
