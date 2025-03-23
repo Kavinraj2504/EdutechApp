@@ -1,4 +1,4 @@
-Here's a **complete README** for your **EdutechApp** including:  
+Here's a **complete README** for  **EdutechApp** including:  
 - **API Endpoints**
 - **Request Examples**
 - **Responses (Success & Errors)**  
@@ -7,8 +7,8 @@ Here's a **complete README** for your **EdutechApp** including:
 
 # **EdutechApp** 🎓
 
-An educational platform that offers quizzes, leaderboards, and course enrollment with authentication.
-
+An educational platform that offers quizzes, leaderboards, and course enrollment with authentication.<br>
+#  Backend App
 ## **Features** 🚀
 - 🔐 User authentication (Signup/Login with JWT)
 - 📚 Course enrollment & tracking
