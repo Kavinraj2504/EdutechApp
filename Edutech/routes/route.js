@@ -168,15 +168,22 @@ res.status(200).send({"message":"Enrolled successfully"})
 })
 //to get leaderboard
 router.get('/leaderboard',authUser,async(req,res)=>{
-    let users=userModel.aggregate([
-        {
-            $sort:{
-                totalPoints:1
+    try {
+        let users = userModel.aggregate([
+            {
+                $sort: {
+                    totalPoints: 1
+                }
+            }, {
+                limit: 10
             }
-        },{
-        limit:10
-        }
-    ])
+        ])
+        res.send(users)
+    }
+    catch(err){
+        res.status(500).send({error:"Error while getting leaderboard",err})
+    }
+
 })
 //to increasePoints
 router.patch('/toincreasepoints',authUser,async(req,res)=>{
