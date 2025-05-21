@@ -1,4 +1,4 @@
-git addconst router=require('express').Router();
+const router=require('express').Router();
 const {userModel,quizModel}=require('../models/models')
 const bcrypt=require('bcryptjs')
 const jwt = require('jsonwebtoken')
